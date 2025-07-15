@@ -91,68 +91,46 @@ const SingleRotateCol = memo(({ list, index, col, duration, callback, onRef }) =
 });
 
 // 十抽专用列动画组件
-const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef, isSingleDraw }) => {
+const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef, isSingleDraw, topPrizeIndex, bottomPrizeIndex }) => {
     const listRef = useRef<any>(null);
     const itemRef = useRef<any[]>([]);
     const itemHeight = remToPx(275);
     const gap = remToPx(15);
-    const containerHeight = itemHeight * 2 + gap;
-    const topGoodsDom = topList.map((g, q) => {
-        const itemRefInstance = useRef(null);
-        itemRef.current.push(itemRefInstance);
-        return (
-            <div key={q} className={`rotate-goods ${(g.sp && g.sp == 1) ? ((g.xx && g.xx == 1) ? 'x xx' : 'x') : ''} ${g.picNotHaveBg ? g.picNotHaveBg : ''}`} ref={itemRefInstance} style={{ height: itemHeight, marginBottom: q === 0 ? gap : 0 }}>
-                <div className={`icon icon_${g.id}`}></div>
-                <div className="bg"></div>
-                <div className="bg-on"></div>
-            </div>
-        );
-    });
-    const bottomGoodsDom = bottomList.map((g, q) => {
-        const itemRefInstance = useRef(null);
-        itemRef.current.push(itemRefInstance);
-        return (
-            <div key={q} className={`rotate-goods ${(g.sp && g.sp == 1) ? ((g.xx && g.xx == 1) ? 'x xx' : 'x') : ''} ${g.picNotHaveBg ? g.picNotHaveBg : ''}`} ref={itemRefInstance} style={{ height: itemHeight }}>
-                <div className={`icon icon_${g.id}`}></div>
-                <div className="bg"></div>
-                <div className="bg-on"></div>
-            </div>
-        );
-    });
+    // 容器高度为3个奖品+2个gap，确保上下都能显示
+    const containerHeight = itemHeight * 3 + gap * 2;
+    // 中奖奖品在中间，其余半透明
+    const renderGoodsDom = (list, prizeIndex, offset = 0) =>
+        list.map((g, q) => {
+            const itemRefInstance = useRef(null);
+            itemRef.current.push(itemRefInstance);
+            const isPrize = q === prizeIndex;
+            return (
+                <div key={q + offset} className={`rotate-goods${isPrize ? ' on' : ''} ${(g.sp && g.sp == 1) ? ((g.xx && g.xx == 1) ? 'x xx' : 'x') : ''} ${g.picNotHaveBg ? g.picNotHaveBg : ''}`} ref={itemRefInstance} style={{ height: itemHeight, marginBottom: offset === 0 && q === 0 ? gap : 0 }}>
+                    <div className={`icon icon_${g.id}`}></div>
+                    <div className="bg"></div>
+                    <div className="bg-on"></div>
+                </div>
+            );
+        });
+    const topGoodsDom = renderGoodsDom(topList, topPrizeIndex, 0);
+    const bottomGoodsDom = renderGoodsDom(bottomList, bottomPrizeIndex, topList.length);
     let animationFrameId = 0;
     let playing = false;
-    const aH = containerHeight;
-    const bounce = (idx) => {
-        const topDom = itemRef.current[0]?.current;
-        const bottomDom = itemRef.current[1]?.current;
-        if (!topDom || !bottomDom) return;
-        const st = (new Date()).getTime();
-        const d = 200;
-        const ease = (x) => 1 + 2.70158 * Math.pow(x - 1, 3) + 1.70158 * Math.pow(x - 1, 2);
-        const animate = () => {
-            const t = (new Date()).getTime() - st;
-            const progress = ((t > d) ? d : t) / d;
-            const sc = 0.75 + 0.27 * ease(progress);
-            topDom.style.transform = `scale(${sc})`;
-            bottomDom.style.transform = `scale(${sc})`;
-            if (t <= d) {
-                animationFrameId = requestAnimationFrame(animate);
-            } else {
-                cancelAnimationFrame(animationFrameId);
-                topDom.style.transform = 'scale(1)';
-                bottomDom.style.transform = 'scale(1)';
-                callback();
-                playing = false;
-            }
-        };
-        topDom.classList.add('on');
-        bottomDom.classList.add('on');
-        animate();
-    };
+    // 中奖奖品停在容器正中间
     const play = () => {
         if (playing) return;
         playing = true;
-        const targetMove = (3 + Number(col)) * aH;
+        // 中奖奖品在topList中的index
+        const prizeIndex = typeof topPrizeIndex === 'number' ? topPrizeIndex : 0;
+        const totalList = [...topList, ...bottomList];
+        const totalLen = totalList.length;
+        // 中奖奖品在总list中的index
+        const prizeGlobalIndex = prizeIndex; // 只考虑topList中奖
+        // 中奖奖品的中心和容器中心对齐
+        // 多滚几圈
+        const loopCount = 3;
+        const targetIndex = loopCount * totalLen + prizeGlobalIndex;
+        const targetMove = (targetIndex * itemHeight + itemHeight / 2 + gap) - (containerHeight / 2);
         const d = duration;
         const ease = (x) => 1 - Math.pow(1 - x, 3);
         const st = (new Date()).getTime();
@@ -160,13 +138,14 @@ const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef
             const t = (new Date()).getTime() - st;
             const progress = ((t > d) ? d : t) / d;
             const currMove = targetMove * ease(progress);
-            const move = currMove % aH;
+            const move = currMove % (totalLen * itemHeight + gap * 2);
             listRef.current.style.transform = `translateY(${-move}px)`;
             if (t <= d) {
                 animationFrameId = requestAnimationFrame(go);
             } else {
                 cancelAnimationFrame(animationFrameId);
-                bounce(col);
+                callback();
+                playing = false;
             }
         };
         go();
@@ -183,7 +162,7 @@ const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef
     useEffect(() => { return () => clear(); }, []);
     return (
         <div className={`rotate-box-col col${col} ${isSingleDraw && col !== 3 ? 'hidden' : ''}`} style={{ width: isSingleDraw ? '100%' : '20%' }}>
-            <div className="rotate-goods-list" ref={listRef} style={{ overflow: 'hidden', position: 'relative' }}>
+            <div className="rotate-goods-list" ref={listRef} style={{ overflow: 'hidden', position: 'relative', height: containerHeight }}>
                 {topGoodsDom}
                 {bottomGoodsDom}
             </div>
@@ -306,6 +285,8 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
         const col = colIndex + 1;
         let topList = [];
         let bottomList = [];
+        let topPrizeIndex = 0;
+        let bottomPrizeIndex = 0;
         if (isPlay && result.length) {
             const topRes = result[colIndex];
             if (topRes && topRes.iPackageId) {
@@ -314,8 +295,10 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                     : topRes.iPackageId;
                 const actualTopId = actualTopPkgId === topDefId ? 6643185 : topDefId;
                 topList = shuffleArrayWithIds(baseList, [actualTopId, +actualTopPkgId]);
+                topPrizeIndex = topList.findIndex(item => item.id == actualTopPkgId);
             } else {
                 topList = shuffleArrayWithIds(baseList, [topDefId]);
+                topPrizeIndex = topList.findIndex(item => item.id == topDefId);
             }
 
             const bottomRes = result[colIndex + 5];
@@ -325,12 +308,16 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                     : bottomRes.iPackageId;
                 const actualBottomId = actualBottomPkgId === bottomDefId ? 6643185 : bottomDefId;
                 bottomList = shuffleArrayWithIds(baseList, [actualBottomId, +actualBottomPkgId]);
+                bottomPrizeIndex = bottomList.findIndex(item => item.id == actualBottomPkgId);
             } else {
                 bottomList = shuffleArrayWithIds(baseList, [bottomDefId]);
+                bottomPrizeIndex = bottomList.findIndex(item => item.id == bottomDefId);
             }
         } else {
             topList = shuffleArrayWithIds(baseList, [topDefId]);
             bottomList = shuffleArrayWithIds(baseList, [bottomDefId]);
+            topPrizeIndex = topList.findIndex(item => item.id == topDefId);
+            bottomPrizeIndex = bottomList.findIndex(item => item.id == bottomDefId);
         }
         rotateColRef[colIndex] = createRef();
         return (
@@ -348,6 +335,8 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                 }}
                 duration={1200}
                 isSingleDraw={false}
+                topPrizeIndex={topPrizeIndex}
+                bottomPrizeIndex={bottomPrizeIndex}
             />
         );
     });
