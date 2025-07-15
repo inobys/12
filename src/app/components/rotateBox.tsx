@@ -96,7 +96,8 @@ const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef
     const itemRef = useRef<any[]>([]);
     const itemHeight = remToPx(275);
     const gap = remToPx(15);
-    const containerHeight = itemHeight * 2 + gap;
+    // 容器高度为3个奖品+2个gap，确保上下都能显示
+    const containerHeight = itemHeight * 3 + gap * 2;
     // 中奖奖品在中间，其余半透明
     const renderGoodsDom = (list, prizeIndex, offset = 0) =>
         list.map((g, q) => {
@@ -115,26 +116,21 @@ const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef
     const bottomGoodsDom = renderGoodsDom(bottomList, bottomPrizeIndex, topList.length);
     let animationFrameId = 0;
     let playing = false;
-    const aH = containerHeight;
-    // 中奖奖品停在中间
+    // 中奖奖品停在容器正中间
     const play = () => {
         if (playing) return;
         playing = true;
-        // 中奖奖品在topList/bottomList中的index
-        // 让中奖奖品停在中间（第1个为中间）
-        // topPrizeIndex/bottomPrizeIndex 中奖奖品在list中的index
-        // 目标位置 = (prizeIndex) * itemHeight + (gap) + n圈
-        // 这里我们让中奖奖品在topList的中间（比如topList长度为5，中间是2）
-        // 但实际滚动时，list是循环的，所以需要多滚几圈
-        // 这里以topList为例
+        // 中奖奖品在topList中的index
         const prizeIndex = typeof topPrizeIndex === 'number' ? topPrizeIndex : 0;
-        const totalLen = topList.length + bottomList.length;
-        // 让中奖奖品停在中间
-        const centerIndex = Math.floor(topList.length / 2); // 让中奖奖品停在topList的中间
-        const offsetIndex = prizeIndex - centerIndex;
-        // 让中奖奖品滚动到中间，多滚几圈
+        const totalList = [...topList, ...bottomList];
+        const totalLen = totalList.length;
+        // 中奖奖品在总list中的index
+        const prizeGlobalIndex = prizeIndex; // 只考虑topList中奖
+        // 中奖奖品的中心和容器中心对齐
+        // 多滚几圈
         const loopCount = 3;
-        const targetMove = (loopCount * totalLen + prizeIndex) * itemHeight + gap * (loopCount * 2 + (prizeIndex > 0 ? 1 : 0));
+        const targetIndex = loopCount * totalLen + prizeGlobalIndex;
+        const targetMove = (targetIndex * itemHeight + itemHeight / 2 + gap) - (containerHeight / 2);
         const d = duration;
         const ease = (x) => 1 - Math.pow(1 - x, 3);
         const st = (new Date()).getTime();
@@ -166,7 +162,7 @@ const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef
     useEffect(() => { return () => clear(); }, []);
     return (
         <div className={`rotate-box-col col${col} ${isSingleDraw && col !== 3 ? 'hidden' : ''}`} style={{ width: isSingleDraw ? '100%' : '20%' }}>
-            <div className="rotate-goods-list" ref={listRef} style={{ overflow: 'hidden', position: 'relative' }}>
+            <div className="rotate-goods-list" ref={listRef} style={{ overflow: 'hidden', position: 'relative', height: containerHeight }}>
                 {topGoodsDom}
                 {bottomGoodsDom}
             </div>
