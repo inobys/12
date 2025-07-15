@@ -295,10 +295,10 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                     : topRes.iPackageId;
                 const actualTopId = actualTopPkgId === topDefId ? 6643185 : topDefId;
                 topList = shuffleArrayWithIds(baseList, [actualTopId, +actualTopPkgId]);
-                topPrizeIndex = topList.findIndex(item => item.id == actualTopPkgId);
+                topPrizeIndex = topList.findIndex(item => String(item.id) === String(actualTopPkgId));
             } else {
                 topList = shuffleArrayWithIds(baseList, [topDefId]);
-                topPrizeIndex = topList.findIndex(item => item.id == topDefId);
+                topPrizeIndex = topList.findIndex(item => String(item.id) === String(topDefId));
             }
 
             const bottomRes = result[colIndex + 5];
@@ -308,16 +308,16 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                     : bottomRes.iPackageId;
                 const actualBottomId = actualBottomPkgId === bottomDefId ? 6643185 : bottomDefId;
                 bottomList = shuffleArrayWithIds(baseList, [actualBottomId, +actualBottomPkgId]);
-                bottomPrizeIndex = bottomList.findIndex(item => item.id == actualBottomPkgId);
+                bottomPrizeIndex = bottomList.findIndex(item => String(item.id) === String(actualBottomPkgId));
             } else {
                 bottomList = shuffleArrayWithIds(baseList, [bottomDefId]);
-                bottomPrizeIndex = bottomList.findIndex(item => item.id == bottomDefId);
+                bottomPrizeIndex = bottomList.findIndex(item => String(item.id) === String(bottomDefId));
             }
         } else {
             topList = shuffleArrayWithIds(baseList, [topDefId]);
             bottomList = shuffleArrayWithIds(baseList, [bottomDefId]);
-            topPrizeIndex = topList.findIndex(item => item.id == topDefId);
-            bottomPrizeIndex = bottomList.findIndex(item => item.id == bottomDefId);
+            topPrizeIndex = topList.findIndex(item => String(item.id) === String(topDefId));
+            bottomPrizeIndex = bottomList.findIndex(item => String(item.id) === String(bottomDefId));
         }
         rotateColRef[colIndex] = createRef();
         return (

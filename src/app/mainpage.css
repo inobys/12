@@ -962,42 +962,24 @@ html {
     /* top: 1.5rem; */
 }
 
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col1 {
-    width: 2.07rem;
-    left: .7rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col2 {
-    width: 2.07rem;
-    left: 2.85rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col3 {
-    width: 2.36rem;
-    left: 4.75rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col4 {
-    width: 2.39rem;
-    left: 6.85rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col5 {
-    width: 2.35rem;
-    left: 8.94rem;
-}
-
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col1 { width: 2rem; left: 0.5rem; }
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col2 { width: 2rem; left: 2.7rem; }
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col3 { width: 2rem; left: 4.9rem; }
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col4 { width: 2rem; left: 7.1rem; }
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col5 { width: 2rem; left: 9.3rem; }
 
 .dwBackLottery5802-rotate .rotate-box .rotate-box-col .rotate-goods-list {
-    width: 2.03rem;
-    height: 63.25rem;
-    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 .dwBackLottery5802-rotate .rotate-box .rotate-goods {
-    width: 2.03rem;
-    height: 2.05rem;
-    margin-bottom: 0.7rem;
+    margin: 0 auto 0.7rem auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dwBackLottery5802-rotate .rotate-box .rotate-goods .icon {
