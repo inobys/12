@@ -936,15 +936,44 @@ html {
     background-size: 100% 100%;
     overflow: hidden;
     margin: 0rem 0 0 5.85rem;
-    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.rotate-list{
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col {
+    /* position: absolute; left: ...; 取消绝对定位 */
+    flex: 1 1 0;
+    max-width: 2.1rem;
+    min-width: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* 可根据实际竖线微调margin */
+    margin: 0 0.08rem;
+}
+
+/* 去除每列的单独宽度和left定位 */
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col1,
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col2,
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col3,
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col4,
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col5 {
+    width: auto;
+    left: unset;
+}
+
+.rotate-list {
     width: 100%;
     height: 6.8rem;
     overflow: hidden;
     position: relative;
     top: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .rotate-row {
@@ -954,39 +983,6 @@ html {
     align-items: flex-start;
     width: 100%;
 }
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col {
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    /* top: 1.5rem; */
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col1 {
-    width: 2.07rem;
-    left: .7rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col2 {
-    width: 2.07rem;
-    left: 2.85rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col3 {
-    width: 2.36rem;
-    left: 4.75rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col4 {
-    width: 2.39rem;
-    left: 6.85rem;
-}
-
-.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col5 {
-    width: 2.35rem;
-    left: 8.94rem;
-}
-
 
 .dwBackLottery5802-rotate .rotate-box .rotate-box-col .rotate-goods-list {
     width: 2.03rem;
