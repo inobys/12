@@ -94,75 +94,51 @@ const SingleRotateCol = memo(({ list, index, col, duration, callback, onRef }) =
 const TenRotateCol = memo(({ topList, bottomList, col, duration, callback, onRef, isSingleDraw, topPrizeIndex, bottomPrizeIndex }) => {
     const listRef = useRef<any>(null);
     const itemRef = useRef<any[]>([]);
-    const itemHeight = remToPx(275);
-    const gap = remToPx(15);
-    // 容器高度为3个奖品+2个gap，确保上下都能显示
-    const containerHeight = itemHeight * 3 + gap * 2;
+
     // 中奖奖品在中间，其余半透明
-    const renderGoodsDom = (list, prizeIndex, offset = 0) =>
-        list.map((g, q) => {
-            const itemRefInstance = useRef(null);
-            itemRef.current.push(itemRefInstance);
-            const isPrize = q === prizeIndex;
-            return (
-                <div key={q + offset} className={`rotate-goods${isPrize ? ' on' : ''} ${(g.sp && g.sp == 1) ? ((g.xx && g.xx == 1) ? 'x xx' : 'x') : ''} ${g.picNotHaveBg ? g.picNotHaveBg : ''}`} ref={itemRefInstance} style={{ height: itemHeight, marginBottom: offset === 0 && q === 0 ? gap : 0 }}>
-                    <div className={`icon icon_${g.id}`}></div>
-                    <div className="bg"></div>
-                    <div className="bg-on"></div>
-                </div>
-            );
-        });
+    const renderGoodsDom = (list, prizeIndex, offset = 0) => {
+        const prizeItem = list[prizeIndex];
+        if (!prizeItem) {
+            // 如果找不到奖励物品，可以返回一个默认的或者空的
+            return null;
+        }
+        const itemRefInstance = useRef(null);
+        itemRef.current[offset] = itemRefInstance; // 直接用offset作为key
+        return (
+            <div key={offset} className={`rotate-goods on ${(prizeItem.sp && prizeItem.sp == 1) ? ((prizeItem.xx && prizeItem.xx == 1) ? 'x xx' : 'x') : ''} ${prizeItem.picNotHaveBg ? prizeItem.picNotHaveBg : ''}`} ref={itemRefInstance}>
+                <div className={`icon icon_${prizeItem.id}`}></div>
+                <div className="bg"></div>
+                <div className="bg-on"></div>
+            </div>
+        );
+    }
     const topGoodsDom = renderGoodsDom(topList, topPrizeIndex, 0);
-    const bottomGoodsDom = renderGoodsDom(bottomList, bottomPrizeIndex, topList.length);
+    const bottomGoodsDom = renderGoodsDom(bottomList, bottomPrizeIndex, 1);
+
     let animationFrameId = 0;
     let playing = false;
+
     // 中奖奖品停在容器正中间
     const play = () => {
         if (playing) return;
         playing = true;
-        // 中奖奖品在topList中的index
-        const prizeIndex = typeof topPrizeIndex === 'number' ? topPrizeIndex : 0;
-        const totalList = [...topList, ...bottomList];
-        const totalLen = totalList.length;
-        // 中奖奖品在总list中的index
-        const prizeGlobalIndex = prizeIndex; // 只考虑topList中奖
-        // 中奖奖品的中心和容器中心对齐
-        // 多滚几圈
-        const loopCount = 3;
-        const targetIndex = loopCount * totalLen + prizeGlobalIndex;
-        const targetMove = (targetIndex * itemHeight + itemHeight / 2 + gap) - (containerHeight / 2);
-        const d = duration;
-        const ease = (x) => 1 - Math.pow(1 - x, 3);
-        const st = (new Date()).getTime();
-        const go = () => {
-            const t = (new Date()).getTime() - st;
-            const progress = ((t > d) ? d : t) / d;
-            const currMove = targetMove * ease(progress);
-            const move = currMove % (totalLen * itemHeight + gap * 2);
-            listRef.current.style.transform = `translateY(${-move}px)`;
-            if (t <= d) {
-                animationFrameId = requestAnimationFrame(go);
-            } else {
-                cancelAnimationFrame(animationFrameId);
-                callback();
-                playing = false;
-            }
-        };
-        go();
+        // 直接调用callback，因为不再有动画
+        setTimeout(() => {
+            callback();
+            playing = false;
+        }, duration);
     };
+
     const clear = () => {
-        cancelAnimationFrame(animationFrameId);
-        listRef.current.style.transform = `translateY(0px)`;
-        itemRef.current.forEach((dom) => {
-            if (dom?.current) dom.current.classList.remove('on');
-        });
         playing = false;
     };
+
     useImperativeHandle(onRef, () => ({ play, clear }));
     useEffect(() => { return () => clear(); }, []);
+
     return (
-        <div className={`rotate-box-col col${col} ${isSingleDraw && col !== 3 ? 'hidden' : ''}`} style={{ width: isSingleDraw ? '100%' : '20%' }}>
-            <div className="rotate-goods-list" ref={listRef} style={{ overflow: 'hidden', position: 'relative', height: containerHeight }}>
+        <div className={`rotate-box-col col${col}`} style={{ width: '20%' }}>
+            <div className="rotate-goods-list" ref={listRef} style={{ overflow: 'hidden', position: 'relative' }}>
                 {topGoodsDom}
                 {bottomGoodsDom}
             </div>
@@ -296,9 +272,11 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                 const actualTopId = actualTopPkgId === topDefId ? 6643185 : topDefId;
                 topList = shuffleArrayWithIds(baseList, [actualTopId, +actualTopPkgId]);
                 topPrizeIndex = topList.findIndex(item => item.id == actualTopPkgId);
+                if (topPrizeIndex === -1) topPrizeIndex = 1; // 默认给一个高亮
             } else {
                 topList = shuffleArrayWithIds(baseList, [topDefId]);
                 topPrizeIndex = topList.findIndex(item => item.id == topDefId);
+                if (topPrizeIndex === -1) topPrizeIndex = 1;
             }
 
             const bottomRes = result[colIndex + 5];
@@ -309,15 +287,19 @@ const TenDrawBox = ({ result, isPlay, onPLay, callback }) => {
                 const actualBottomId = actualBottomPkgId === bottomDefId ? 6643185 : bottomDefId;
                 bottomList = shuffleArrayWithIds(baseList, [actualBottomId, +actualBottomPkgId]);
                 bottomPrizeIndex = bottomList.findIndex(item => item.id == actualBottomPkgId);
+                if (bottomPrizeIndex === -1) bottomPrizeIndex = 1;
             } else {
                 bottomList = shuffleArrayWithIds(baseList, [bottomDefId]);
                 bottomPrizeIndex = bottomList.findIndex(item => item.id == bottomDefId);
+                if (bottomPrizeIndex === -1) bottomPrizeIndex = 1;
             }
         } else {
             topList = shuffleArrayWithIds(baseList, [topDefId]);
             bottomList = shuffleArrayWithIds(baseList, [bottomDefId]);
             topPrizeIndex = topList.findIndex(item => item.id == topDefId);
+            if (topPrizeIndex === -1) topPrizeIndex = 1;
             bottomPrizeIndex = bottomList.findIndex(item => item.id == bottomDefId);
+            if (bottomPrizeIndex === -1) bottomPrizeIndex = 1;
         }
         rotateColRef[colIndex] = createRef();
         return (
