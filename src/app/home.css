@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+div {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+img {
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+/* 在750px宽度的屏幕上字体大小为100px */
+html {
+  font-size: 100px;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.timeTravel111-page-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 4, 30, 0.8);
+  color: #fff;
+  font-size: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.timeTravel111-page-container .buy-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5.8rem;
+}
+.timeTravel111-page-container .buy-btn {
+  width: 2rem;
+  height: 0.9rem;
+  background-color: #e2c11a;
+  border-radius: 0.08rem;
+  font-size: 0.38rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeTravel111-page-box {
+  width: 19.2rem;
+  height: 8.86rem;
+  background: url(images/bg.jpg) no-repeat;
+  background-size: cover;
+}
+.tt111-content-title {
+  position: absolute;
+  left: 7.7rem;
+  top: 4.86rem;
+  width: 7.21rem;
+  height: 2.55rem;
+  background: url(images/title-img.png) no-repeat;
+  background-size: cover;
+  z-index: 30;
+}
+.tt111-time-remaining-wrapper {
+  position: absolute;
+  right: 1rem;
+  top: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+.tt111-time-remaining-icon {
+  width: 0.38rem;
+  height: 0.4rem;
+  background: url(images/time-icon.png) no-repeat;
+  background-size: cover;
+  margin-right: 0.12rem;
+}
+/* toast弹窗 start */
+.tt111-toast-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  /* toast弹窗 end */
+}
+.tt111-toast-wrapper .toast-tips-box {
+  width: 6.5rem;
+  height: 4.77rem;
+  background-color: #fff;
+  border-radius: 0.08rem;
+  padding: 0.2rem 0.4rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, -50%);
+}
+.tt111-toast-wrapper .toast-tips-title {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 0.3rem;
+  text-align: center;
+  height: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.tt111-toast-wrapper .toast-tips-close {
+  width: 0.4rem;
+  height: 0.28rem;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  background: url(images/close-btn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.tt111-toast-wrapper .toast-tips-main {
+  width: 100%;
+  height: 3.6rem;
+  overflow: scroll;
+  position: relative;
+  justify-content: center;
+}
+.tt111-toast-wrapper .toast-tips-txt {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e2c11a;
+  font-size: 0.2rem;
+  text-align: center;
+  line-height: 0.3rem;
+}
+.tt111-toast-box {
+  position: absolute;
+  left: 63%;
+  top: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 11.59rem;
+  height: 1.77rem;
+  background: url(images/tips-bg.png) no-repeat;
+  background-size: cover;
+  margin-left: -5.795rem;
+  margin-top: -0.885rem;
+  font-size: 0.38rem;
+  color: #fff;
+  z-index: 110;
+}

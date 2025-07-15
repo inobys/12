@@ -1,0 +1,117 @@
+@import "./animation.less";
+
+* {
+    /* pixui中仅支持block none flex，默认值为 flex */
+    position: relative;
+    /* 只支持 border-box，且默认所有元素都是 border-box 状态（IE怪异盒模型），宽高包含 padding 和 border */
+    box-sizing: border-box;
+    /* 不支持inherit，默认值为 visible，auto 效果等同于 visible */
+    overflow: visible;
+    /* 不支持 white-space */
+    white-space: nowrap;
+
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+
+    /** flex 布局影响下默认不自动放大缩小 */
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+body {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PixUI 自定义标签 */
+text {
+    white-space: normal;
+}
+
+div,
+pixslot {
+    /* pixui中仅支持block none flex，默认值为 flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+}
+
+a {
+    color: aliceblue;
+}
+
+b,
+i,
+em {
+    font-style: normal;
+    font-weight: normal;
+    font-family: gamefont;
+}
+
+.flex {
+    display: flex;
+
+    &-row {
+        flex-direction: row;
+    }
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-center {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.transparency {
+    opacity: 0;
+    background-color: transparent;
+}
+
+.btn {
+    cursor: pointer;
+
+    &.btn-disable {
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%);
+    }
+}
+
+body>#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.pixui-page {
+    justify-content: center;
+    align-items: center;
+}
+
+.pixui-popup-wrap {
+    justify-content: center;
+    align-items: center;
+
+    .pixui-popup {
+        width: 1664px;
+        height: 1024px;
+        justify-content: center;
+        align-items: center;
+    }
+}

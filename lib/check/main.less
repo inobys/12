@@ -1,0 +1,63 @@
+@baseColor: #6dffa7;
+@spinColor: spin(@baseColor, 90);
+
+.bottomTabBtn{
+ font-size:25px;
+ color: black;
+}
+.bottomTabBtnActive{
+ font-size:30px;
+ color: red;
+}
+
+.btn{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(173, 120, 220);
+  }
+}
+
+
+.title {
+  font-size: 1.2em;
+  vertical-align: middle;
+  //margin-top: 10px;
+  color: @spinColor;
+}
+
+.wp95{
+  width: 95%;
+}
+
+.redFont{
+  color: red;
+  display: inline-block;
+}
+
+.flexrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  // font-size: 35px;
+  color: @spinColor
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.bkimage{
+  font-size: 30px;
+  background-image: url(../assets/border.png);
+}

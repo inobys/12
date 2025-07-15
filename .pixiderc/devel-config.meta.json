@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://px.woa.com/schemas/devel-config",
+    "title": "Development Config Schema",
+    "type": "object",
+    "required": [],
+    "properties": {
+        "clientLogEnablement": {
+            "title": "客户端日志开关",
+            "type": "boolean"
+        },
+        "customConfig": {
+            "type": "object",
+            "title": "自定义配置",
+            "patternProperties": {
+                "^[a-zA-Z][a-zA-Z0-9_]*$": {
+                    "type": "string",
+                    "title": "自定义开发配置项"
+                }
+            }
+        }
+    }
+}

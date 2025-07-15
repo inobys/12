@@ -1,0 +1,1914 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+img {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+/* 在750px宽度的屏幕上字体大小为100px */
+html {
+    font-size: 100px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.dwBackLottery5802-page {
+    width: 19.2rem;
+    height: 8.85rem;
+    background-color: rgba(0, 4, 30, 0.8);
+    font-family: "fzlthjt";
+    color: #fff;
+    font-size: 0.24rem;
+}
+
+.dwBackLottery5802-wrapper {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg_page.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding-left: 3rem;
+}
+
+.dwBackLottery5802-wrapper .bg-video {
+    width: 19.2rem;
+    height: 8.85rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container {
+    width: 100%;
+    height: 100%;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-tit {
+    width: 5.45rem;
+    height: 2.11rem;
+    background: url(images/fore_tit.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0.6rem;
+    left: 5.04rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-cov {
+    width: 5.46rem;
+    height: 4.56rem;
+    background: url(images/fore_cov.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore-craft {
+    width: 10.32rem;
+    height: 8.85rem;
+    background: url(images/fore_craft.png) no-repeat;
+    background-size: 100% 100%;
+    left: 4.65rem;
+    z-index: 1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-craft1 {
+    width: 5.5rem;
+    height: 3.85rem;
+    background: url(images/fore_craft1.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 2.88rem;
+    left: 2.34rem;
+    z-index: 2;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-craft2 {
+    width: 8.73rem;
+    height: 3.81rem;
+    background: url(images/fore_craft2.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1.97rem;
+    left: 6.65rem;
+    z-index: 1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-lb1 {
+    width: 0.88rem;
+    height: 2.14rem;
+    background: url(images/fore_lb1.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 4.74rem;
+    left: 3.76rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-lb2 {
+    width: 0.87rem;
+    height: 2.08rem;
+    background: url(images/fore_lb2.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 3.09rem;
+    left: 10.54rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .fore .fore-lb3 {
+    width: 0.44rem;
+    height: 2.06rem;
+    background: url(images/fore_lb3.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1.6rem;
+    left: 12.72rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk1,
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk2,
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk3,
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk4,
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk5 {
+    width: 0.45rem;
+    height: 0.4rem;
+    background: url(images/sk_got.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 3rem;
+    left: 3.08rem;
+    z-index: 2;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk2 {
+    top: 4.66rem;
+    left: 14rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk3 {
+    top: 5.06rem;
+    left: 4.3rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk4 {
+    top: 3.4rem;
+    left: 11.08rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .gotsk5 {
+    top: 1.85rem;
+    left: 13.05rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .frames-shining {
+    position: absolute;
+    top: -0.9rem;
+    left: 0;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-record {
+    width: .81rem;
+    height: 0.71rem;
+    background: url(images/btn_record.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0.35rem;
+    right: 3.88rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-jackpot {
+    width: 0.81rem;
+    height: 0.71rem;
+    background: url(images/btn_jackpot.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0.35rem;
+    right: 3.09rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-single {
+    z-index: 8;
+    width: 1.26rem;
+    height: 1.62rem;
+    position: absolute;
+    top: 6.82rem;
+    right: 7.21rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-single .cost-icon {
+    width: 1.52rem;
+    height: 0.5rem;
+    background: url(images/cost_icon1.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1rem;
+    left: -0.21rem;
+    z-index: 9;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-single .normal-bg {
+    width: 100%;
+    height: 100%;
+    background: url(images/btn_single.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-single.press .press-bg {
+    opacity: 1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi {
+    z-index: 8;
+    width: 1.93rem;
+    height: 1.62rem;
+    position: absolute;
+    top: 6.82rem;
+    right: 5.3rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-purchase-bag {
+    z-index: 8;
+    width: 1.29rem;
+    height: 1.27rem;
+    background: url(images/btn_purchase_bag.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 6.98rem;
+    right: 3.8rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg_exchange.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .purchase-close {
+    width: .77rem;
+    height: .59rem;
+    background: url(images/close.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: .9rem;
+    right: .84rem;
+    z-index: 3;
+
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .left-bag {
+    width: 4.35rem;
+    height: 4.85rem;
+    position: absolute;
+    top: 2.3rem;
+    right: 7.95rem;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .left-bag .bagx2-img {
+    width: 4.35rem;
+    height: 4.36rem;
+    background: url(images/bagx2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .left-bag .bagx2-bth {
+    width: 2.62rem;
+    height: 1.06rem;
+    background: url(images/buy100.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 3.52rem;
+    right: .84rem;
+    z-index: 3;
+
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .left-bag .bagx2-text {
+
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .right-bag {
+    width: 4.35rem;
+    height: 4.85rem;
+    position: absolute;
+    top: 2.25rem;
+    right: 2.3rem;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .right-bag .bagx10-img {
+    width: 4.35rem;
+    height: 4.36rem;
+    background: url(images/bagx10.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .right-bag .bagx10-bth {
+    width: 2.62rem;
+    height: 1.06rem;
+    background: url(images/buy300.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 3.52rem;
+    right: 1rem;
+    z-index: 3;
+
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .purchase-container .right-bag .bagx10-text {
+
+}
+
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi .cost-icon {
+    width: 1.73rem;
+    height: 0.5rem;
+    background: url(images/cost_icon2.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1rem;
+    left: -0.31rem;
+    z-index: 9;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi .normal-bg {
+    width: 100%;
+    height: 100%;
+    background: url(images/btn_multi.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi .press-bg {
+    width: 1.34rem;
+    height: 1.34rem;
+    background: url(images/btn_press.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -0.04rem;
+    left: -0.04rem;
+    opacity: 0;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi .frames-shining {
+    opacity: 1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi.press .press-bg {
+    opacity: 1;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-multi.press .frames-shining {
+    opacity: 0;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-next {
+    width: 3.21rem;
+    height: 1.72rem;
+    background: url(images/btn-next.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 7.1rem;
+    left: 1.88rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-rule {
+    width: 0.57rem;
+    height: 0.56rem;
+    background: url(images/icon_rule.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0.39rem;
+    right: 0.56rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .numtips {
+    width: 100%;
+    position: absolute;
+    top: 6.4rem;
+    left: 0;
+    align-items: center;
+    z-index: 5;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .numtips .numtips-txt {
+    height: 0.32rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 0.11rem;
+    border-radius: 0.1rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .numtips .numtips-txt text {
+    font-size: 0.18rem;
+    line-height: 0.24rem;
+    color: #fff;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .numtips .numtips-txt text.x {
+    font-size: 0.22rem;
+    color: #ffe46b;
+    font-weight: bold;
+    margin-left: 0.1rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .ticket-box {
+    position: absolute;
+    z-index: 3;
+    top: 0.35rem;
+    right: 1.43rem;
+    width: 1.49rem;
+    height: 0.67rem;
+    background: url(images/ticket_box.png) no-repeat;
+    background-size: 100% 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .ticket-box .ticket-text {
+    width: 0.75rem;
+    font-size: 0.28rem;
+    color: #ffdf5e;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 0.09rem;
+    margin-left: 0.5rem;
+    margin-bottom: .05rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .ticket-box .ticket-tips {
+    width: 2.51rem;
+    height: 1.23rem;
+    background: url(images/ticket_tips.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.19rem;
+    color: #000;
+    justify-content: center;
+    padding: 0.16rem 0 0 0.1rem;
+    position: absolute;
+    z-index: 10;
+    top: 0.76rem;
+    left: -0.21rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .ticket-box .ticket-tips .x {
+    color: #5d9ef0;
+    margin-bottom: 0.12rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-exchange {
+    width: 3.04rem;
+    height: 1.18rem;
+    background: url(images/btn_exchange.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 7.29rem;
+    right: 0.59rem;
+    z-index: 8;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-exchange .flykey-box {
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-exchange .flykey-box .icon-flykey {
+    width: 0.84rem;
+    height: 0.64rem;
+    background: url(images/icon_flykey.png) no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: -0.06rem;
+}
+
+.dwBackLottery5802-wrapper .dwBackLottery5802-container .btn-exchange .flykey-box .num {
+    font-size: 0.23rem;
+    font-weight: bold;
+    color: #095939;
+    line-height: 0.25rem;
+}
+
+.dwBackLottery5802-board {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg_board.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.dwBackLottery5802-board .close-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dwBackLottery5802-board .titbox {
+    width: 3.80rem;
+    height: 7.15rem;
+    background: url(images/titbox.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1.14rem;
+    left: 5.06rem;
+    z-index: 9;
+}
+
+.dwBackLottery5802-board .titbox .titbox-senior {
+    width: 100%;
+    height: 3.07rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    z-index: 2;
+}
+
+.dwBackLottery5802-board .titbox .titbox-senior-btn {
+    width: 1.72rem;
+    height: 0.55rem;
+    background: url(images/btn_senior.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 2.42rem;
+    left: 0.8rem;
+}
+
+.dwBackLottery5802-board .taskbox {
+    overflow: hidden;
+    width: 10.86rem;
+    height: 5.44rem;
+    /*background: url(images/taskbox_bg.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    position: absolute;
+    top: 2.82rem;
+    left: 7.9rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    scrollbar-horizontal-track-color: rgba(0, 0, 0, 0);
+    scrollbar-horizontal-track-width: 1px;
+    scrollbar-horizontal-thumb-color: rgba(0, 0, 0, 0);
+    scrollbar-horizontal-thumb-width: 1px;
+    padding-right: 0.48rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list {
+    flex-direction: row;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 {
+    padding-top: 0.18rem;
+    padding-left: 0.8rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .taskbox-item {
+    width: 2.02rem;
+    height: 1.93rem;
+    padding-left: 0.15rem;
+    margin-right: 0.24rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .taskbox-item-img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .taskbox-item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .taskbox-item-img img.sp {
+    width: 1.72rem;
+    height: 1.8rem;
+    margin: -0.17rem 0 0 -0.13rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .taskbox-item-bd {
+    width: 2.85rem;
+    height: 2.72rem;
+    background: url(images/taskbox1.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -0.41rem;
+    left: -0.42rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .gott .taskbox-item-bd {
+    width: 2.09rem;
+    height: 1.97rem;
+    background: url(images/taskbox_gott1.png) no-repeat;
+    background-size: 100% 100%;
+    top: -0.04rem;
+    left: 0;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list1 .lock .taskbox-item-bd {
+    width: 2.09rem;
+    height: 2rem;
+    background: url(images/taskbox_lock1.png) no-repeat;
+    background-size: 100% 100%;
+    top: -0.07rem;
+    left: 0;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 {
+    padding-top: 0.55rem;
+    padding-left: 0.82rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 .taskbox-item {
+    width: 1.86rem;
+    height: 1.9rem;
+    margin-right: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 .taskbox-item-img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 .taskbox-item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 .taskbox-item-bd {
+    width: 2.66rem;
+    height: 2.69rem;
+    background: url(images/taskbox2.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -0.42rem;
+    left: -0.4rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 .gott .taskbox-item-bd {
+    width: 1.9rem;
+    height: 1.9rem;
+    background: url(images/taskbox_gott2.png) no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-list.list2 .lock .taskbox-item-bd {
+    width: 1.97rem;
+    height: 2rem;
+    background: url(images/taskbox_lock2.png) no-repeat;
+    background-size: 100% 100%;
+    top: -0.1rem;
+    left: 0;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-dot {
+    width: 100%;
+    padding-left: 1.64rem;
+    position: absolute;
+    top: 2.17rem;
+    left: 0;
+    z-index: -1;
+    flex-direction: row;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-dot .dot {
+    width: 0.37rem;
+    height: 0.37rem;
+    background-color: #2a3045;
+    border: 0.02rem solid #020c17;
+    border-radius: 50%;
+    margin-right: 1.89rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-dot .dot.on {
+    background-color: #fdda46;
+    border: 0.02rem solid #fdda46;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-dot .dot img {
+    width: 0.39rem;
+    height: 0.2rem;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-dot .dot:last-child {
+    margin-right: 0;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-prog {
+    width: 0.52rem;
+    height: 0.16rem;
+    position: absolute;
+    top: 2.29rem;
+    left: 0;
+    z-index: -2;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-prog .taskbox-prog-line {
+    width: 25.6rem;
+    height: 4.74rem;
+    background: url(images/taskbox_prog.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -2.26rem;
+    right: 0;
+    z-index: 1;
+}
+
+.dwBackLottery5802-board .taskbox .taskbox-unlock {
+    width: 0.75rem;
+    height: 0.59rem;
+    background: url(images/taskbox_btn.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 2.06rem;
+    left: 0.08rem;
+    z-index: 9;
+}
+
+.dwBackLottery5802-board .taskbox.full .taskbox-unlock {
+    display: none;
+}
+
+.dwBackLottery5802-board .taskbox.full .taskbox-prog-line {
+    margin-right: -1rem;
+}
+
+.dwBackLottery5802-board .ticket-box {
+    width: 2.06rem;
+    height: 0.83rem;
+    background: url(images/ticket_box.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0.46rem;
+    right: 1.92rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dwBackLottery5802-board .ticket-box .ticket-text {
+    width: 0.88rem;
+    font-size: 0.28rem;
+    color: #ffdf5e;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 0.09rem;
+    margin-left: 0.8rem;
+    margin-bottom: .05rem;
+}
+
+.dwBackLottery5802-board .ticket-box .ticket-tips {
+    width: 2.51rem;
+    height: 1.23rem;
+    background: url(images/ticket_tips.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.19rem;
+    color: #000;
+    justify-content: center;
+    padding: 0.16rem 0 0 0.1rem;
+    position: absolute;
+    z-index: 5;
+    top: 0.76rem;
+    left: 0.21rem;
+}
+
+.dwBackLottery5802-board .ticket-box .ticket-tips .x {
+    color: #5d9ef0;
+    margin-bottom: 0.12rem;
+}
+
+.dwBackLottery5802-board .task-return-icon {
+    position: absolute;
+    top: 0.59rem;
+    right: 0;
+    width: .57rem;
+    height: 0.56rem;
+    background: url(images/task-return-icon.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.81rem;
+    margin-left: .52rem;
+}
+
+.dwBackLottery5802-rotate {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+/*.dwBackLottery5802-rotate .rotate-cov {*/
+/*    width: 14.3rem;*/
+/*    height: 7.1rem;*/
+/*    background: url(images/rotate_cov.png) no-repeat;*/
+/*    background-size: 100% 100%;*/
+/*    position: absolute;*/
+/*    top: 1.54rem;*/
+/*    left: 4.44rem;*/
+/*    z-index: 4;*/
+/*}*/
+
+.dwBackLottery5802-rotate .rotate-tit {
+    width: 6.44rem;
+    height: 2.48rem;
+    background: url(images/rotate_tit.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0.69rem;
+    left: 8.82rem;
+    z-index: 5;
+}
+
+.dwBackLottery5802-rotate .rotate-type {
+    width: 3.67rem;
+    height: 2.13rem;
+    position: absolute;
+    top: 6.19rem;
+    left: 14.98rem;
+    z-index: 5;
+}
+
+.dwBackLottery5802-rotate .rotate-type.x1 {
+    background: url(images/rotate_x1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-rotate .rotate-type.x10 {
+    background: url(images/rotate_x10.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-rotate .rotate-box {
+    width: 12rem;
+    height: 8.4rem;
+    background: url(images/rotate_box.png) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin: 0rem 0 0 5.85rem;
+    flex-direction: row;
+}
+
+.rotate-list{
+    width: 100%;
+    height: 6.8rem;
+    overflow: hidden;
+    position: relative;
+    top: 1.1rem;
+}
+
+.rotate-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col {
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    /* top: 1.5rem; */
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col1 {
+    width: 2.07rem;
+    left: .7rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col2 {
+    width: 2.07rem;
+    left: 2.85rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col3 {
+    width: 2.36rem;
+    left: 4.75rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col4 {
+    width: 2.39rem;
+    left: 6.85rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col.col5 {
+    width: 2.35rem;
+    left: 8.94rem;
+}
+
+
+.dwBackLottery5802-rotate .rotate-box .rotate-box-col .rotate-goods-list {
+    width: 2.03rem;
+    height: 63.25rem;
+    justify-content: flex-start;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods {
+    width: 2.03rem;
+    height: 2.05rem;
+    margin-bottom: 0.7rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0.06rem;
+    left: 0.05rem;
+    opacity: 0.5;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643185 {
+    background-image: url(images/goods/001.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643186 {
+    background-image: url(images/goods/002.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643187 {
+    background-image: url(images/goods/003.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643188 {
+    background-image: url(images/goods/004.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643189 {
+    background-image: url(images/goods/028.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643190 {
+    background-image: url(images/goods/029.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643191 {
+    background-image: url(images/goods/030.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643192 {
+    background-image: url(images/goods/031.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643193 {
+    background-image: url(images/goods/026.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643194 {
+    background-image: url(images/goods/032.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643195 {
+    background-image: url(images/goods/033.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643196 {
+    background-image: url(images/goods/034.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643197 {
+    background-image: url(images/goods/009.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643198 {
+    background-image: url(images/goods/035.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643199 {
+    background-image: url(images/goods/015.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643200 {
+    background-image: url(images/goods/016.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643201 {
+    background-image: url(images/goods/017.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643202 {
+    background-image: url(images/goods/018.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643203 {
+    background-image: url(images/goods/036.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643204 {
+    background-image: url(images/goods/020.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6643221 {
+    background-image: url(images/goods/021.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6645352 {
+    background-image: url(images/goods/022.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6645353 {
+    background-image: url(images/goods/023.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6645354 {
+    background-image: url(images/goods/024.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6645355 {
+    background-image: url(images/goods/025.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .icon_6645356 {
+    background-image: url(images/goods/027.png);
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .bg {
+    width: 100%;
+    height: 100%;
+    background: url(images/rotate_goods.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods .bg-on {
+    width: 2.8rem;
+    height: 2.8rem;
+    background: url(images/rotate_goods_on.png) no-repeat;
+    background-size: 100% 100%;
+    top: -0.59rem;
+    left: -0.5rem;
+    z-index: -1;
+    opacity: 0;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.x img {
+    width: 1.9rem;
+    height: 2.4rem;
+    top: -0.67rem;
+    left: -0.09rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.x .icon {
+    width: 1.9rem;
+    height: 2.4rem;
+    top: -0.67rem;
+    left: -0.09rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.x .icon_6551400,
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.x .icon_6551401 {
+    width: 2rem;
+    height: 2.4rem;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.x .bg {
+    background: url(images/rotate_goodx.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.x .bg-on {
+    background: url(images/rotate_goodx_on.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.xx .bg-on {
+    background: url(images/rotate_goodxx_on.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.on .icon {
+    opacity: 1;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.on .bg {
+    opacity: 0;
+}
+
+.dwBackLottery5802-rotate .rotate-box .rotate-goods.on .bg-on {
+    opacity: 1;
+}
+
+
+.dwBackLottery5802-modal .exchange-bag-groups {
+    width: 14.27rem;
+    height: 5.46rem;
+    background: url(images/exchange-bag-group.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1.62rem;
+    right: .23rem;
+    z-index: 2;
+}
+
+.dwBackLottery5802-modal .exchange-bag-groups .exchange-left-bag {
+    width: 5.63rem;
+    height: 5.89rem;
+    background: url(images/exchange-left-bag.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -.33rem;
+    right: 7.8rem;
+    z-index: 1;
+}
+
+.dwBackLottery5802-modal .exchange-bag-groups .exchange-right-bag {
+    width: 5.63rem;
+    height: 5.89rem;
+    background: url(images/exchange-right-bag.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -.33rem;
+    right: 1.47rem;
+    z-index: 1;
+}
+
+.dwBackLottery5802-modal .exchange-random {
+    width: 5.11rem;
+    height: 1.35rem;
+    background: url(images/exchange-random.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5.87rem;
+    right: 5.05rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-modal .exchange-btn {
+    width: 2.46rem;
+    height: 1.19rem;
+    background: url(images/exchange-btn.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 6.86rem;
+    right: 6.35rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-modal .exchange-close {
+    width: .77rem;
+    height: .59rem;
+    background: url(images/close.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: .9rem;
+    right: .84rem;
+    z-index: 3;
+}
+
+.dwBackLottery5802-modal {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg_exchange.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*padding-left: 3rem;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 99;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /* 奖励一览弹窗 start */
+    /* 奖励一览弹窗 end */
+}
+
+.dwBackLottery5802-mask {
+    width: 19.2rem;
+    height: 8.85rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop {
+    width: 8.33rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-head {
+    width: 100%;
+    height: 1.22rem;
+    background: url(images/pop_head.png) no-repeat;
+    background-size: 100% 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.24rem;
+    z-index: 1;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-head .ptit {
+    width: 2rem;
+    height: 0.54rem;
+    padding-left: 0.22rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-head .ptit.ptit1 {
+    background: url(images/ptit1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-head .ptit.ptit2 {
+    background: url(images/ptit2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-head .ptit.ptit3 {
+    background: url(images/ptit3.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-head .pclose {
+    width: 1.1rem;
+    height: 0.9rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-cont {
+    width: 7.23rem;
+    background: url(images/pop_bg.png) no-repeat;
+    background-position: 0 100%;
+    background-size: 100% auto;
+    padding-top: 0.1rem;
+    padding-bottom: 0.5rem;
+    margin-left: 0.66rem;
+    margin-top: -0.01rem;
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .msgbox {
+    width: 100%;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .msgbox.h {
+    padding: 0.5rem 0.6rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .msgbox text {
+    font-size: 0.33rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-btns {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .pop-confbtn {
+    width: 1.95rem;
+    height: 0.7rem;
+    background: url(images/conf_btn.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-buy1,
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-buy2 {
+    width: 2.05rem;
+    height: 0.87rem;
+    background: url(images/btn_buy1.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: -0.15rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-buy2 {
+    background: url(images/btn_buy2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop {
+    width: 1.9rem;
+    height: 0.77rem;
+    background: url(images/btn_pop.png) no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 0.07rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.3rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .icon-ticket {
+    width: 0.49rem;
+    height: 0.49rem;
+    background: url(images/ticket_icon.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .icon-dq {
+    width: 0.68rem;
+    height: 0.49rem;
+    background: url(images/icon_dq.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .icon-flykey {
+    width: 0.64rem;
+    height: 0.49rem;
+    background: url(images/icon_flykey.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.04rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .icon-stone {
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url(images/icon_stone.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .num1 {
+    width: 0.42rem;
+    height: 0.3rem;
+    background: url(images/pop_num1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .num2 {
+    width: 0.57rem;
+    height: 0.3rem;
+    background: url(images/pop_num2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .txt {
+    font-size: 0.32rem;
+    color: #fff;
+    margin-left: 0.04rem;
+    font-weight: bold;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-pop .txt text {
+    line-height: 0.34rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-exkey1,
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-exkey2 {
+    width: 2.02rem;
+    height: 0.76rem;
+    background: url(images/btn_exkey1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-pop .btn-exkey2 {
+    background: url(images/btn_exkey2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .resbox {
+    padding-top: 0.06rem;
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-top {
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .resbox .icon-inbox {
+    width: 0.58rem;
+    height: 0.45rem;
+    background: url(images/icon_inbox.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-txt {
+    padding-top: 0.04rem;
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-txt text {
+    font-size: 0.27rem;
+    line-height: 0.37rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-txt .x {
+    color: #ffea00;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-goods {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.16rem 0;
+    flex-wrap: wrap;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-goods .resbox-goods-item {
+    width: 1.11rem;
+    height: 1.15rem;
+    background: url(images/pop_goods2.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 0 0.08rem 0.08rem;
+    padding-bottom: 0.06rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-goods .resbox-goods-item.x {
+    background: url(images/pop_goods1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .resbox .resbox-goods .resbox-goods-item img {
+    height: 0.84rem;
+}
+
+.dwBackLottery5802-modal .record {
+    width: 6rem;
+    height: 2.5rem;
+    background-color: #004cd3;
+}
+
+.dwBackLottery5802-modal .record .load-more {
+    width: 100%;
+    height: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.24rem;
+}
+
+.dwBackLottery5802-modal .record-empty {
+    width: 100%;
+    height: 1.72rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.28rem;
+}
+
+.dwBackLottery5802-modal .record-wrapper {
+    width: 95%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-vertical-track-color: rgba(0, 0, 0, 0);
+    scrollbar-vertical-track-width: 1px;
+    scrollbar-vertical-thumb-color: rgba(0, 0, 0, 0);
+    scrollbar-vertical-thumb-width: 1px;
+    padding: 0.14rem 0;
+}
+
+.dwBackLottery5802-modal .record-wrapper .record-item {
+    width: 100%;
+    padding-left: 0.4rem;
+    padding-bottom: 0.14rem;
+}
+
+.dwBackLottery5802-modal .record-wrapper .record-time {
+    width: 2.12rem;
+    height: 0.31rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.4rem;
+    background: url(images/record_time.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .record-wrapper .record-time text {
+    font-size: 0.19rem;
+    line-height: 0.21rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.dwBackLottery5802-modal .record-wrapper .record-name {
+    width: 4.5rem;
+    color: #fff;
+    padding-top: 0.04rem;
+    white-space: wrap;
+}
+
+.dwBackLottery5802-modal .record-wrapper .record-name text {
+    font-size: 0.22rem;
+    line-height: 0.24rem;
+}
+
+.dwBackLottery5802-modal .jackpot {
+    width: 12.77rem;
+    height: 6.63rem;
+    background: url(images/jackpot_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.dwBackLottery5802-modal .jackpot-close {
+    right: 0;
+    top: 0.5rem;
+    position: absolute;
+    width: 1.2rem;
+    height: 1rem;
+    z-index: 2;
+}
+
+.dwBackLottery5802-modal .jackpot-list-content {
+    width: 5rem;
+    height: 4.5rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 1.76rem;
+    margin-left: 0.77rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: 0.06rem;
+    padding-left: 0.06rem;
+    scrollbar-vertical-track-color: rgba(0, 0, 0, 0);
+    scrollbar-vertical-track-width: 1px;
+    scrollbar-vertical-thumb-color: rgba(0, 0, 0, 0);
+    scrollbar-vertical-thumb-width: 1px;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item {
+    width: 1.5rem;
+    height: 1.42rem;
+    background: url(images/jackpot_item.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.04rem;
+    margin-bottom: 0.06rem;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item .jackpot-list-img {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item .jackpot-list-img img {
+    width: 1.4rem;
+    height: 1.4rem;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item .sel-bd {
+    width: 1.63rem;
+    height: 1.53rem;
+    background: url(images/jackpot_item_sel.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -0.06rem;
+    left: -0.06rem;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item .got-icon {
+    width: 0.35rem;
+    height: 0.34rem;
+    background: url(images/icon_got.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -0.04rem;
+    right: -0.08rem;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item.sp_xl_bg {
+    background-image: none;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item.sp_xl_bg .jackpot-list-img img {
+    width: 1.45rem;
+    height: 1.6rem;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.02rem;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item.sp_krt_bg {
+    background-image: none;
+}
+
+.dwBackLottery5802-modal .jackpot-list-item.sp_krt_bg .jackpot-list-img img {
+    width: 1.53rem;
+    height: 1.6rem;
+    position: absolute;
+    top: -0.2rem;
+    left: -0.05rem;
+}
+
+.dwBackLottery5802-modal .jackpot-hero {
+    width: 4rem;
+    position: absolute;
+    left: 6.23rem;
+    top: 1.66rem;
+}
+
+.dwBackLottery5802-modal .jackpot-hero .jackpot-hero-icon {
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .jackpot-hero .jackpot-hero-icon img {
+    width: 100%;
+}
+
+.dwBackLottery5802-modal .jackpot-hero .jackpot-hero-tips {
+    width: 1.36rem;
+    height: 0.25rem;
+    background: url(images/jackpot_text.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.04rem;
+}
+
+.dwBackLottery5802-modal .jackpot-info {
+    width: 1.89rem;
+    height: 3.58rem;
+    background: url(images/jackpot_info.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0.3rem;
+    top: 1.98rem;
+}
+
+.dwBackLottery5802-modal .jackpot-info .name {
+    width: 100%;
+    padding: 0.4rem 0.12rem 0.2rem 0.24rem;
+    align-items: center;
+}
+
+.dwBackLottery5802-modal .jackpot-info .name text {
+    font-size: 0.28rem;
+    line-height: 0.36rem;
+    font-weight: bold;
+}
+
+.dwBackLottery5802-modal .jackpot-info .type {
+    font-size: 0.16rem;
+    margin-left: 0.4rem;
+}
+
+.dwBackLottery5802-modal .jackpot-info .desc {
+    font-size: 0.19rem;
+    margin-left: 0.4rem;
+    margin-top: 0.1rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-exchange {
+    width: 19.2rem;
+    height: 8.85rem;
+    background: url(images/pick_exchange.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-exchange .exchange1,
+.dwBackLottery5802-modal .dwBackLottery5802-exchange .exchange2 {
+    width: 4.8rem;
+    height: 5.7rem;
+    position: absolute;
+    top: 2.22rem;
+    left: 5.9rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-exchange .exchange2 {
+    left: 12.75rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-exchange .closebtn {
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+}
+
+.dwBackLottery5802-modal .dwBackLottery5802-exchange-bg {
+    width: 19.2rem;
+    height: 8.85rem;
+    background: url(images/bg_exchange.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* 规则弹窗 */
+.dyrules-modal {
+    width: 100%;
+    height: 100%;
+    padding-left: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+}
+
+.dyrules-modal .dwBackLottery5802-mask {
+    width: 19.2rem;
+    height: 8.85rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pclose {
+    width: 1.1rem;
+    height: 0.9rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont {
+    width: 9.88rem;
+    height: 5.4rem;
+    background: url(images/rules-pop.png) no-repeat;
+    background-position: 0 100%;
+    background-size: 100% auto;
+    padding: 1.35rem 0.7rem 0.5rem 1.22rem;
+    align-items: center;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    justify-content: flex-start;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont .row {
+    width: 100%;
+    padding: 0.12rem 0;
+    white-space: normal;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont .row text {
+    font-size: 0.23rem;
+    line-height: 0.34rem;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont .row .time {
+    color: #00ff2f;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont .row1 {
+    color: #00ff2f;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont .row1 text {
+    font-weight: 700;
+}
+
+.dyrules-modal .dwBackLottery5802-pop .pop-cont .pop-rules-cont .b {
+    font-weight: 700;
+}
+
+/* toast弹窗 start */
+.dwBackLottery5802-toast {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: hidden;
+    display: block;
+}
+
+.dwBackLottery5802-toast .toast-box {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 11.59rem;
+    height: 1.77rem;
+    background: url(images/toast.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.38rem;
+    margin-left: -4.295rem;
+    margin-top: -0.885rem;
+    color: #fff;
+}
+
+.img-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* toast弹窗 end */
+

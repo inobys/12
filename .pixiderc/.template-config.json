@@ -1,0 +1,28 @@
+{
+    "name": "PixUIActivityFramework",
+    "title": "PixUI活动开发框架",
+    "description": "官方推荐活动开发专用框架,支持原生特效",
+    "organizationID": 100001,
+    "sysType": "template",
+    "avatarUrl": "https://down.pandora.qq.com/public/open/gex/anythings/ORG-100001/111/cc956000d6e0f33bd81ad348c691e44a0965896fefd715c05cd9f6532c8bdb36/企业微信截图_832ce86c-1af5-456d-b4b0-62e6474e9ff3.png",
+    "doc": {
+        "content": "## PixUI活动开发框架\r\n任何疑问请联系@grandxu",
+        "meta": {},
+        "inBundlePath": ""
+    },
+    "id": 260,
+    "tplPath": "c:\\Users\\grandxu\\Desktop\\UGit\\pixide-pi-framework",
+    "includes": [
+        ".eslintignore",
+        ".eslintrc.js",
+        ".pixiderc",
+        ".vscode",
+        "@types",
+        "gen",
+        "lib",
+        "package.json",
+        "src",
+        "tsconfig.json",
+        "yarn.lock"
+    ]
+}

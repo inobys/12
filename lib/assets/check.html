@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        body {
+            /*background-color: #0c85d0;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10pt;
+        }
+
+        p {
+            font-size: 20pt;
+        }
+
+        .frame {
+            border: 2px solid #aa0000;
+            /*display: flex;*/
+            /*flex-direction: row;*/
+            /*justify-content: space-evenly;*/
+            width: 90%;
+            padding: 10px;
+        }
+
+    </style>
+    <script>
+        window.self = window;
+        let onload = () => {
+            console.log('onload...');
+        };
+
+        toggle = function () {
+            let div = document.getElementById("timer");
+            let v = div.style.visibility;
+            console.log("visibility",v);
+            div.style.visibility = v == "hidden" ? "visible" : "hidden";
+        }
+    </script>
+</head>
+<body onload="onload();">
+
+<p>container rendered by JSX:</p>
+<div id="container" class="frame"></div>
+<img src="https://dgss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-27/297f5edb1e984613083a2d3cc0c5bb36.png">
+
+<div style="height:30pt"></div>
+<p>content in static html:</p>
+<div class="frame" onclick="toggle()">
+    <div id="timer"> I'm a timer!</div>
+</div>
+</body>
+</html>

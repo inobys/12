@@ -1,0 +1,17 @@
+[
+    {
+        "name": "app",
+        "template": "./src/app/index.html",
+        "entry": "./src/app/main.tsx"
+    },
+    {
+        "name": "popup",
+        "template": "./src/popup/index.html",
+        "entry": "./src/popup/main.tsx"
+    },
+    {
+        "name": "preprocess",
+        "template": "./src/preprocess/index.html",
+        "entry": "./src/preprocess/main.tsx"
+    }
+]

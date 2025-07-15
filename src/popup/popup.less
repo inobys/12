@@ -1,0 +1,127 @@
+.pixui-popup {
+  .layer {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 1664px;
+      height: 1024px;
+      transform: scale(1.2);
+    }
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dialog-wrap {
+    position: absolute;
+    animation: zoomIn 400ms 1 forwards;
+
+    >.dialog-background {
+      position: absolute;
+      left: -50px;
+      top: -23px;
+    }
+
+    >.dialog-btn-close {
+      position: absolute;
+      right: 15px;
+      top: 8px;
+    }
+  }
+
+  .toast {
+    animation: zoomIn 400ms 1 forwards;
+  }
+
+  .dialog.zoomOut,
+  .toast.zoomOut {
+    animation: zoomOut 100ms 1 forwards;
+  }
+}
+
+.dialog {
+  width: 804px;
+  height: 488px;
+
+  >.dialog-title {
+    position: absolute;
+    left: 23px;
+    top: 19px;
+    font-size: 26px;
+    color: white;
+    align-items: center;
+
+    .img-msgbox-btn_rule {
+      margin-left: 10px;
+    }
+  }
+
+  &.dialog-rule {
+    flex-direction: column;
+    align-items: center;
+
+    .pixui-text-wrap {
+      margin: 80px 65px 25px;
+
+      >text {
+        width: 100%;
+      }
+    }
+
+    .pixui-text {
+      width: 100%;
+      font-size: 20px;
+      line-height: 40px;
+      font-family: gamefontyahei;
+      // color: #637590;
+      color: #aeb2b7;
+    }
+  }
+
+  &.dialog-tips {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .msg {
+        font-size: 24px;
+        line-height: 30px;
+        color: white;
+        padding: 0 100px;
+
+        >text {
+          text-align: center;
+        }
+      }
+
+      .img-msgbox-bg_item {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 30px;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      line-height: 22px;
+      color: white;
+      padding-top: 5px;
+    }
+  }
+}

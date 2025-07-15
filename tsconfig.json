@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"baseUrl": ".",
+		"paths": {
+			"preact": ["lib/preact/src"],
+			"preact/hooks": ["lib/preact/hooks/src"],
+			"preact-router": ["lib/preact-router"],
+			"preact-router/match": ["lib/preact-router/match"]
+		},
+		"outDir": "dist",
+		"experimentalDecorators": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"noImplicitAny": false,
+		"jsx": "preserve",
+		"jsxFactory": "h",
+        "sourceMap": true,
+		// "noEmit": true
+	},
+	"include": ["lib", "src", "@types"],
+	"exclude": ["lib/react-window/", "node_modules", "**/test"]
+}
